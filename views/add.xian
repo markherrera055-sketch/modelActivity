@@ -1,0 +1,15 @@
+{{> head }}
+
+    <form action="/insert" method="Post">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="name">
+        <label>Description</label>
+        <input type="text" name="description" placeholder="description">
+        <label>Category</label>
+        <input type="text" name="category" placeholder="category">
+        <label>Price</label>
+        <input type="text" name="price" placeholder="price">
+        <label>Type</label>
+        <input type="text" name="type" placeholder="type">
+        <input type="submit" name="save">    
+    </form>

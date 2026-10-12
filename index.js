@@ -114,9 +114,11 @@ import category from "./routes/categoryRoute.js";
 import order from "./routes/orderRoute.js";
 import product from "./routes/productRoute.js";
 import user from "./routes/userRoute.js";
+import DeviceController from "./routes/deviceRoute.js";
 
 app.use("/student", student);
 app.use("/category", category);
 app.use("/order", order);
 app.use("/product", product);
 app.use("/user", user);
+app.use("/", DeviceController);

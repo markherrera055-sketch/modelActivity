@@ -26,8 +26,10 @@
     
 import express from "express";
 import { homePage } from "../controllers/homeController.js";
+import { devicecontroller } from "../controllers/devicecontroller.js";
+
 const router = express.Router();
-router.get("/", homePage);
+router.get("/home", homePage);
 
 import { loginPage, registerPage, forgotPasswordPage, dashboardPage, loginUser, registerUser, logoutUser } from "../controllers/authController.js";
 
@@ -38,5 +40,15 @@ router.post("/register", registerUser);
 router.get("/forgot-password", forgotPasswordPage);
 router.get("/dashboard", dashboardPage);
 router.get("/logout", logoutUser);
+
+
+
+
+router.get("/", devicecontroller.index)
+router.get("/add", devicecontroller.add);
+router.post("/insert", devicecontroller.insert);
+router.get("/edit/:id", devicecontroller.edit);
+router.post("/update/:id", devicecontroller.update);
+router.get("/delete/:id", devicecontroller.delete);
 
 export default router;
